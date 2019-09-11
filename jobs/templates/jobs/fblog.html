@@ -1,0 +1,82 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+		    {% load staticfiles  %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/js/bootstrap.min.js' %}">
+
+	</head>
+	<body >
+		{% load staticfiles %}
+		<div class="container">
+		<!--this is nav bar of our site -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+	    <a class="navbar-brand" href="{% url 'bl' %}">Photfolio</a>
+	    <ul class="navbar-nav  mr-auto mt-2 mt-lg-0">
+	      <li class="nav-item ">
+	        <a class="nav-link" href="{% url 'bl' %}">Home</a>
+	      </li>
+	      <li class="nav-item ">
+	        <a class="nav-link" href="{% url 'hindex' %}">Blogs</a>
+	      </li>
+	      <li class="nav-item a">
+	        <a class="nav-link disabled" href="{% static 'krishna_resume.docx' %}">Resume</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+		<img src="{% static 'banner.jpg' %}" height="300" width="100%">
+		<h1 class="text-center">Hi this is my blog</h1>
+	    </div>
+	</div>
+
+	<!--this is the card of the templates -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="post-preview">
+        <img height="300" width="aito" src="{{b.image.url}}" class="card-img-top" alt="...">        
+            <h2 class="post-title">
+              {{b.titile}}
+            </h2>
+            <i><b><p class="post-meta">Posted by Krishna pawar
+            {{b.jdate}}</p></b></i>
+            <p class="post-subtitle">
+              {{b.summary}}
+            </p>
+        </div>
+        <hr>
+    </div>
+  </div>
+</div>
+
+	
+
+
+	<!--this is footer of my web site-->
+	<hr>
+	<footer class="text-muted text-center">
+	&copy krishna pawar: {% now "Y"%}
+	</footer>
+
+	<!--this is js link jambo tron -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+	</div>
+	</body>
+	</html>
